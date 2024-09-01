@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/game.css">
+
+  <link rel="icon" type="image/png" href="assets/images/Logo_for_Guess_My_Number_Game.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <title>Guess My Number - Single Player</title>
+</head>
+
+<body>
+  <!-- Small Screen Section -->
+  <header class="header">
+    <button class="header__btn-back">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+    <!-- <h1>Guess My Number</h1> -->
+    <div class="header__life-span">
+      <i class="fa-solid fa-heart heart" id="heart-1" style="color: #ff0000;"></i>
+      <i class="fa-solid fa-heart heart" id="heart-2" style="color: #ff0000;"></i>
+      <i class="fa-solid fa-heart heart" id="heart-3" style="color: #ff0000;"></i>
+    </div>
+
+    <button class="header__btn-reset">
+      <i class="fa-solid fa-rotate-right"></i>
+    </button>
+  </header>
+
+  <section class="game">
+    <div class="game__message">
+      <p>I am thinking of a number between 1 to 10, Now guess the number.</p>
+    </div>
+
+    <div class="game__number">
+      <i class="fa-solid fa-question"></i>
+    </div>
+
+    <!-- Input for guessing the number -->
+    <div class="game__input-wrapper">
+      <input type="text" class="game__input-space">
+    </div>
+  </section>
+
+  <!-- Large Screen Section -->
+  <div class="game__bg-screen">
+    <div class="game__guess-input-wrapper">
+      <input type="text" class="game__guess-input-space">
+
+      <div class="game__btn-wrapper">
+        <button class="game__btn game__btn-check">Check</button>
+        <button class="game__btn game__btn-restart">Clear</button>
+      </div>
+    </div>
+
+    <div class="game__life-span">
+      <i class="fa-solid fa-heart heart" id="heart-4" style="color: #ff0000;"></i>
+      <i class="fa-solid fa-heart heart" id="heart-5" style="color: #ff0000;"></i>
+      <i class="fa-solid fa-heart heart" id="heart-6" style="color: #ff0000;"></i>
+    </div>
+  </div>
+</body>
+
+</html>
