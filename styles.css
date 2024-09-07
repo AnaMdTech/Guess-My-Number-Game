@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #104f97, #131314);
+}
+
+/* Home Page Style */
+#homePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.2rem;
+  color: #c4c4c4;
+}
+
+.btn-play {
+  background: #104f97;
+  font-size: 2rem;
+  color: #eee;
+  padding: 1rem 1.5rem;
+  width: 10rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: background 0.25s, transform 0.5s;
+}
+
+.btn-play:hover {
+  background: #0d335f;
+  color: #ffffffc5;
+}
+
+.btn-play:focus {
+  outline: none;
+}
+
+.btn-play:active {
+  transform: translateY(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.fa-play {
+  margin-right: 1rem;
+}
+
+/* Game Page Style */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin: 0 2rem;
+}
+
+.header__btn-back,
+.header__btn-reset {
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  background: #5b095b;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.header__btn-reset {
+  background: #070707;
+}
+
+.header__btn-reset:hover {
+  background: #131313;
+}
+
+.header__btn-back:hover {
+  background: #440a44;
+  color: #ffffffc5;
+}
+
+.header__btn-back:active,
+.header__btn-reset:active {
+  transform: translateY(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header__btn-back .fa-arrow-left,
+.header__btn-reset .fa-rotate-right {
+  font-size: 2rem;
+  color: white;
+}
+
+.game__message {
+  padding: 3rem;
+  background: #284463;
+  color: #ffffff;
+  width: 30.3rem;
+  height: 15.8rem;
+  text-align: center;
+  margin: 0 auto 3rem;
+  font-size: 2.2rem;
+}
+
+.game__number {
+  padding: 2rem;
+  background: #ffffff;
+  width: 15rem;
+  text-align: center;
+  margin: 3rem auto;
+  font-size: 4.5rem;
+  color: #161616;
+}
+
+.game {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 6rem;
+}
+
+.game__guess-input-space {
+  padding: 3.5rem 3rem;
+  background: #ffffff;
+  width: 20rem;
+  text-align: center;
+  font-size: 3rem;
+  color: #161616;
+  margin-bottom: 3rem;
+}
+
+.game__guess-input-space:focus {
+  border: none;
+  outline: none;
+}
+
+.game__btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game__btn {
+  background: #070707;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  width: 7.5rem;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.5s;
+}
+
+.game__btn:hover {
+  background: #000000;
+  color: #ffffffc5;
+}
+
+.game__btn:active {
+  transform: translateY(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.game__life-span {
+  display: flex;
+  font-size: 3.5rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Hide and show sections with opacity and position */
+.page {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+@media (min-width: 720px) {
+  header {
+    margin: 0rem 5rem;
+  }
+
+  .header__btn-back,
+  .header__btn-reset {
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+  }
+
+  .header__btn-back i,
+  .header__btn-reset i {
+    display: none;
+  }
+
+  .header__btn-back::before {
+    content: "Home";
+  }
+
+  .header__btn-reset::before {
+    content: "Play Again";
+  }
+
+  .game__message {
+    padding: 4rem;
+    width: 45rem;
+    height: 20rem;
+    font-size: 3.2rem;
+  }
+}
+
+@media (min-width: 820px) {
+  .game__message {
+    padding: 5rem;
+    width: 50rem;
+    height: 25rem;
+    font-size: 3.5rem;
+  }
+  .game {
+    justify-content: center;
+    gap: 20rem;
+  }
+}
