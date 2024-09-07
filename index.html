@@ -4,24 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="images/png" href="assets/images/Logo_for_Guess_My_Number_Game.png">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-  <link rel="stylesheet" href="css/welcome.css">
+  <link rel="stylesheet" href="styles.css">
   <title>Guess My Number</title>
 </head>
 
 <body>
-  <main>
-    <div class="container">
-      <h1>GUESS<span> the</span><span> NUMBER</span></h1>
-      <button class="btn-play" aria-label="play-button"><i class="fa-solid fa-play"></i>Play</button>
-    </div>
+  <!-- Home Section -->
+  <main id="homePage" class="page active">
+    <h1>GUESS<span> the</span><span> NUMBER</span></h1>
+    <button class="btn btn-play" aria-label="play-button"><i class="fa-solid fa-play"></i>Play</button>
   </main>
 
-  <script src="js/welcome.js"></script>
+  <!-- Game Section -->
+  <section id="gamePage" class="page">
+    <header class="header">
+      <button class="btn header__btn-back" aria-label="Back to home">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <button class="btn header__btn-reset" aria-label="Reset the game">
+        <i class="fa-solid fa-rotate-right"></i>
+      </button>
+    </header>
+
+    <div class="game__message">
+      <p>I am thinking of a number between 1 to 10, Now guess the number.</p>
+    </div>
+    <div class="game__number">?</div>
+
+    <div class="game">
+      <div class="game__guess-input-wrapper">
+        <input type="text" class="game__guess-input-space" aria-label="Input your guess" />
+        <div class="game__btn-wrapper">
+          <button class="btn game__btn game__btn-check">Check</button>
+          <button class="btn game__btn game__btn-clear">Clear</button>
+        </div>
+      </div>
+
+      <div class="game__life-span">
+        <i class="fa-solid fa-heart heart" style="color: #ff0000;"></i>
+        <i class="fa-solid fa-heart heart" style="color: #ff0000;"></i>
+        <i class="fa-solid fa-heart heart" style="color: #ff0000;"></i>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
